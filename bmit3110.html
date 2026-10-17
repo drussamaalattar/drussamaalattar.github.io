@@ -5,6 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%232e624c%22/%3E%3Cpath d=%22M15 55 H40 l4 -4 l4 4 h4 l4 -22 l4 30 l4 -10 h5 q5 -7 10 0 H85%22 fill=%22none%22 stroke=%22%23f4c430%22 stroke-width=%226%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
 <title>BMIT 3110 مع د. العطار</title>
+<meta property="og:title" content="شرح BMIT 3110 – Biomedical DSP">
+<meta property="og:description" content="شرح كامل لمادة BMIT 3110 بجامعة الأمير سطام على نفس السلايدات، مع حل كل التمارين ومراجعة الميدتيرم.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drussamaalattar.github.io/bmit3110.html">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -81,6 +86,16 @@ video{width:100%;max-width:100%;aspect-ratio:1280/654;border-radius:12px;border:
   .who{grid-template-columns:1fr}
   .wrap{gap:48px}
 }
+.chapters{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.chapters details{border-bottom:1px solid var(--line);padding:12px 0}
+.chapters summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:17px;list-style:none;display:flex;gap:10px;align-items:baseline}
+.chapters summary::-webkit-details-marker{display:none}
+.chapters summary::after{content:"+";margin-inline-start:auto;color:var(--accent);font-size:20px}
+.chapters details[open] summary::after{content:"−"}
+.chapters .n{font-family:var(--mono);font-size:13px;color:var(--gold);min-width:64px}
+.chapters ul{margin:10px 0 0;padding-inline-start:22px;color:var(--muted);font-size:15px;display:flex;flex-direction:column;gap:4px}
+.chapters p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.chapters summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -99,7 +114,7 @@ video{width:100%;max-width:100%;aspect-ratio:1280/654;border-radius:12px;border:
     <a class="btn" href="https://wa.me/201000999274" target="_blank" rel="noopener">اشترك عبر واتساب</a>
     <span class="num">أو راسل: <b id="phone1">00201000999274</b> <button class="copy" id="copy1" data-target="phone1" type="button">نسخ</button></span>
   </div>
-  <p class="note">واتساب رسائل فقط. حلول تمارين مجانية كل يومين على قناة تليجرام <a href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener" style="color:var(--accent)">Engineering Hub</a>.</p>
+  <p class="note">واتساب رسائل فقط. حلول تمارين مجانية كل يوم على قناة تليجرام <a href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener" style="color:var(--accent)">Engineering Hub</a>.</p>
 </section>
 
 <section>
@@ -118,6 +133,32 @@ video{width:100%;max-width:100%;aspect-ratio:1280/654;border-radius:12px;border:
     <li><span>مقاطع قصيرة مرتبة، ترجع لأي جزء في ثواني.</span></li>
     <li><span>تسأل في أي نقطة مش واضحة على الواتساب.</span></li>
   </ul>
+</section>
+
+<section id="free">
+  <h2>حلول مجانية على القناة</h2>
+  <p class="lead">مقطع جديد كل يوم على قناة <a href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener" style="color:var(--accent)">Engineering Hub</a>، بالترتيب ده:</p>
+  <div class="chapters">
+    <details open><summary><span class="n">الفصل 1</span> Fundamentals of DSP</summary><ul>
+      <li>Amplitude &amp; Period لإشارة y = 3 sin 2t</li><li>Period لإشارة ½ cos(0.3t)</li><li>Exercise 2: Signal Period</li><li>Average Power لـ cos(t) بالآلة الحاسبة</li><li>Average Power لـ A sin(t)</li></ul></details>
+    <details><summary><span class="n">الفصل 2</span> Sampling &amp; Quantization</summary><ul>
+      <li>نظرية Nyquist</li><li>مثال محلول على الـSampling Rate</li><li>الـAliasing</li><li>Exercise 4: الترددات والـfmax</li><li>Exercise 4: الـNyquist Rate</li><li>Exercise 4: الـQuantization Step</li></ul></details>
+    <details><summary><span class="n">الفصل 3</span> Discrete Time Systems</summary><ul>
+      <li>Exercise 1: تمثيل الإشارات ورسمها</li><li>Exercise 2: Signal Representation</li><li>Exercise 3: Shifting وReversal وScaling</li><li>Exercise 4: Scaling وجمع الإشارات</li><li>Exercise 5: إثبات الـTime Invariance</li></ul></details>
+    <details><summary><span class="n">الفصل 4</span> Digital Filtering</summary><ul><li>الـMoving Average Filter</li></ul></details>
+    <details><summary><span class="n">ميدتيرم</span> مراجعة الدكتور</summary><ul><li>حل الأسئلة الأربعة لمراجعة الدكتور للميدتيرم</li></ul></details>
+  </div>
+</section>
+
+<section id="faq">
+  <h2>أسئلة بتتكرر</h2>
+  <div class="chapters">
+    <details><summary>الكورس المسجل بيوصلني إزاي؟</summary><p>بعد الاشتراك بتتضاف لقناة تليجرام خاصة فيها كل مقاطع المادة مترتبة، وتتفرج في أي وقت طول الترم.</p></details>
+    <details><summary>الدفع بيكون إزاي؟</summary><p>ابعت على الواتساب ونتفق على طريقة الدفع المناسبة ليك. الخصوصي بيتقسط على 3 أو 4 دفعات.</p></details>
+    <details><summary>الجلسات اللايف بتكون فين وإمتى؟</summary><p>على زوم، في ميعاد بالليل يناسب أغلب الطلاب، وكل جلسة بتتسجل وتنزل لو فاتتك.</p></details>
+    <details><summary>لو عندي سؤال في نقطة مش واضحة؟</summary><p>ابعته على الواتساب، صورة أو رسالة، وهيترد عليك.</p></details>
+    <details><summary>أنا من الكويت أو قطر، ينفع؟</summary><p>أيوة، الشرح أونلاين والأسعار بتتحدد حسب المادة والدولة، اسأل على الواتساب.</p></details>
+  </div>
 </section>
 
 <section>

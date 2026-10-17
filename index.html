@@ -6,6 +6,11 @@
 <meta name="description" content="شرح مواد الهندسة والحاسبات لطلاب الجامعات في السعودية والكويت وقطر مع د. أسامة العطار. كورسات مسجلة ولايف وحل تمارين BMIT 3110 وغيرها.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%232e624c%22/%3E%3Cpath d=%22M15 55 H40 l4 -4 l4 4 h4 l4 -22 l4 30 l4 -10 h5 q5 -7 10 0 H85%22 fill=%22none%22 stroke=%22%23f4c430%22 stroke-width=%226%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
 <title>Engineering Hub</title>
+<meta property="og:title" content="Engineering Hub · د. أسامة العطار">
+<meta property="og:description" content="شرح مواد الهندسة والحاسبات والعلوم الطبية لطلاب السعودية والكويت وقطر، على منهج جامعتك، مع حل التمارين.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://drussamaalattar.github.io/">
+<meta name="twitter:card" content="summary">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
@@ -80,6 +85,16 @@ footer{font-size:13px;color:var(--muted);text-align:center}
   .brand nav{display:none}
   .wrap{gap:48px}
 }
+.chapters{display:flex;flex-direction:column;border-top:1px solid var(--line)}
+.chapters details{border-bottom:1px solid var(--line);padding:12px 0}
+.chapters summary{cursor:pointer;font-family:var(--display);font-weight:700;font-size:17px;list-style:none;display:flex;gap:10px;align-items:baseline}
+.chapters summary::-webkit-details-marker{display:none}
+.chapters summary::after{content:"+";margin-inline-start:auto;color:var(--accent);font-size:20px}
+.chapters details[open] summary::after{content:"−"}
+.chapters .n{font-family:var(--mono);font-size:13px;color:var(--gold);min-width:64px}
+.chapters ul{margin:10px 0 0;padding-inline-start:22px;color:var(--muted);font-size:15px;display:flex;flex-direction:column;gap:4px}
+.chapters p{margin:8px 0 0;color:var(--muted);font-size:15px}
+.chapters summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 </style>
 </head>
 <body>
@@ -134,7 +149,7 @@ footer{font-size:13px;color:var(--muted);text-align:center}
     <div>
       <span class="code">BMIT 3110</span>
       <h3 style="direction:ltr;text-align:right">Biomedical Digital Signal Processing</h3>
-      <p style="color:var(--muted)">جامعة الأمير سطام بن عبدالعزيز. الفصول السبعة كاملة، وكل التمارين محلولة، ومراجعات للميدتيرم والفاينل.</p>
+      <p style="color:var(--muted)">جامعة الأمير سطام بن عبدالعزيز. الفصول السبعة كاملة، وكل التمارين محلولة، ومراجعات للميدتيرم والفاينل. أكتر من 25 مقطع حل مجاني على القناة.</p>
       <div class="cta"><a class="btn" href="bmit3110.html">تفاصيل الكورس والأسعار</a></div>
     </div>
     <a href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener" style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;aspect-ratio:16/9;max-width:100%;border-radius:12px;background:#2e624c;color:#fff;text-decoration:none;padding:16px;text-align:center"><span style="width:64px;height:64px;border-radius:50%;background:#f4c430;display:grid;place-items:center;font-size:28px;color:#14251d">▶</span><span style="font-family:var(--display);font-weight:700;font-size:18px;direction:ltr">Nyquist Sampling Theorem</span><span style="font-size:14px;opacity:.85">شاهد المقطع على قناة تليجرام</span></a>
@@ -154,6 +169,17 @@ footer{font-size:13px;color:var(--muted);text-align:center}
 <section>
   <h2>مين بيشرح</h2>
   <p class="lead">د. م. أسامة العطار، محاضر جامعي في جامعات مصرية، وبيدرّس طلاب الهندسة والحاسبات في السعودية والكويت وقطر. خبرة أكتر من 15 سنة تدريس، وقبلها مهندس اتصالات في هواوي وإريكسون ونوكيا سيمنز وفودافون.</p>
+</section>
+
+<section id="faq">
+  <h2>أسئلة بتتكرر</h2>
+  <div class="chapters">
+    <details><summary>الكورس المسجل بيوصلني إزاي؟</summary><p>بعد الاشتراك بتتضاف لقناة تليجرام خاصة فيها كل مقاطع المادة مترتبة، وتتفرج في أي وقت طول الترم.</p></details>
+    <details><summary>الدفع بيكون إزاي؟</summary><p>ابعت على الواتساب ونتفق على طريقة الدفع المناسبة ليك. الخصوصي بيتقسط على 3 أو 4 دفعات.</p></details>
+    <details><summary>الجلسات اللايف بتكون فين وإمتى؟</summary><p>على زوم، في ميعاد بالليل يناسب أغلب الطلاب، وكل جلسة بتتسجل وتنزل لو فاتتك.</p></details>
+    <details><summary>لو عندي سؤال في نقطة مش واضحة؟</summary><p>ابعته على الواتساب، صورة أو رسالة، وهيترد عليك.</p></details>
+    <details><summary>أنا من الكويت أو قطر، ينفع؟</summary><p>أيوة، الشرح أونلاين والأسعار بتتحدد حسب المادة والدولة، اسأل على الواتساب.</p></details>
+  </div>
 </section>
 
 <section id="contact" class="final">

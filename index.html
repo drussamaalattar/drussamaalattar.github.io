@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="شرح مواد الهندسة والحاسبات لطلاب الجامعات في السعودية والكويت وقطر مع د. أسامة العطار. كورسات مسجلة ولايف وحل تمارين BMIT 3110 وغيرها.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22%3E%3Ccircle cx=%2250%22 cy=%2250%22 r=%2250%22 fill=%22%232e624c%22/%3E%3Cpath d=%22M15 55 H40 l4 -4 l4 4 h4 l4 -22 l4 30 l4 -10 h5 q5 -7 10 0 H85%22 fill=%22none%22 stroke=%22%23f4c430%22 stroke-width=%226%22 stroke-linecap=%22round%22/%3E%3C/svg%3E">
+<title>Engineering Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@500;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: RTL single column; brand bar, then subject families as labelled lists (not cards), one featured course, ways to study, contact. Signal trace motif carried from the logo. */
+:root{
+  --bg:#f3f6f4; --surface:#ffffff; --ink:#14251d; --muted:#556a60; --line:#d4e0d9;
+  --accent:#2e624c; --accent-ink:#ffffff; --trace:#c9960c; --gold:#c9960c; --gold-soft:#f6ecc9;
+  --display:"Noto Kufi Arabic", "IBM Plex Sans Arabic", Tahoma, sans-serif;
+  --body:"IBM Plex Sans Arabic", Tahoma, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1714; --surface:#16211c; --ink:#e6efe9; --muted:#9db3a8; --line:#28382f;
+  --accent:#5fb48d; --accent-ink:#0b1310; --trace:#e8bd45; --gold:#e8bd45; --gold-soft:#2e2711; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1714; --surface:#16211c; --ink:#e6efe9; --muted:#9db3a8; --line:#28382f;
+  --accent:#5fb48d; --accent-ink:#0b1310; --trace:#e8bd45; --gold:#e8bd45; --gold-soft:#2e2711; color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.75;
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+.wrap{max-width:960px;margin:0 auto;display:flex;flex-direction:column;gap:64px;padding-block:24px 64px}
+h1,h2,h3{font-family:var(--display);line-height:1.35;margin:0;text-wrap:balance}
+h1{font-size:clamp(30px,6vw,48px);font-weight:800}
+h2{font-size:clamp(22px,4vw,30px);font-weight:700}
+h3{font-size:18px;font-weight:700}
+p{margin:0}
+section{display:flex;flex-direction:column;gap:20px;min-width:0}
+.lead{font-size:19px;color:var(--muted);max-width:62ch}
+.brand{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.brand .id{display:flex;align-items:center;gap:12px}
+.brand img{width:52px;height:52px;border-radius:50%}
+.brand b{font-family:var(--display);font-size:18px}
+.brand nav{display:flex;gap:18px;font-size:15px}
+.brand nav a{color:var(--muted);text-decoration:none}
+.brand nav a:hover{color:var(--accent)}
+.trace{width:100%;height:60px;display:block}
+.trace path{fill:none;stroke:var(--trace);stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:var(--accent-ink);text-decoration:none;
+  font-family:var(--display);font-weight:700;font-size:17px;padding:12px 22px;border-radius:10px;border:0;cursor:pointer}
+.btn.alt{background:transparent;color:var(--accent);border:1.5px solid var(--accent)}
+.btn:focus-visible,.copy:focus-visible,a:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.num{display:inline-flex;gap:8px;align-items:center;font-size:15px;color:var(--muted)}
+.num b{color:var(--ink);font-family:var(--mono);font-weight:500;user-select:all;direction:ltr;unicode-bidi:isolate}
+.copy{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:4px 10px;font:inherit;font-size:13px;cursor:pointer}
+.facts{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:15px;color:var(--muted)}
+.facts span::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--gold);margin-inline-end:8px;vertical-align:middle}
+.families{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}
+.family{display:flex;flex-direction:column;gap:10px;min-width:0;border-top:3px solid var(--accent);padding-top:14px}
+.family p{font-size:14px;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tags span{direction:ltr;unicode-bidi:isolate;font-size:14px;background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:2px 9px}
+.feature{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.feature > div{min-width:0;display:flex;flex-direction:column;gap:12px}
+.code{align-self:flex-start;background:var(--gold-soft);border:1px solid var(--gold);border-radius:6px;padding:2px 10px;font-family:var(--mono);font-size:14px;letter-spacing:.04em}
+video{width:100%;max-width:100%;aspect-ratio:1280/654;border-radius:10px;border:1px solid var(--line);background:#000;display:block}
+.ways{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ways li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 20px;padding:14px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ways li p{grid-column:1/-1;font-size:15px;color:var(--muted)}
+.ways .price{font-family:var(--display);font-weight:700;color:var(--accent);white-space:nowrap}
+.final{background:var(--accent);color:var(--accent-ink);border-radius:14px;padding:28px 24px}
+.final .lead{color:var(--accent-ink);opacity:.85}
+.final .btn{background:var(--accent-ink);color:var(--accent)}
+.final .num{color:var(--accent-ink)}
+.final .num b{color:var(--accent-ink)}
+.final .copy{color:var(--accent-ink);border-color:var(--accent-ink)}
+footer{font-size:13px;color:var(--muted);text-align:center}
+@media (max-width:760px){
+  .families{grid-template-columns:1fr}
+  .feature{grid-template-columns:1fr}
+  .brand nav{display:none}
+  .wrap{gap:48px}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap" dir="rtl" lang="ar">
+
+<header class="brand">
+  <div class="id"><svg width="52" height="52" viewBox="0 0 100 100" role="img" aria-label="شعار مركز الهندسة"><circle cx="50" cy="50" r="50" fill="#2e624c"/><text x="50" y="40" text-anchor="middle" font-family="Noto Kufi Arabic, Tahoma, sans-serif" font-weight="800" font-size="20" fill="#fff">مركز</text><text x="50" y="64" text-anchor="middle" font-family="Noto Kufi Arabic, Tahoma, sans-serif" font-weight="800" font-size="20" fill="#fff">الهندسة</text><path d="M18 76 H44 l3 -3 l3 3 h3 l3 -12 l3 16 l3 -6 h4 q4 -5 8 0 H82" fill="none" stroke="#f4c430" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Engineering Hub</b></div>
+  <nav aria-label="أقسام الموقع">
+    <a href="#subjects">المواد</a><a href="#courses">الكورسات</a><a href="#ways">طرق الدراسة</a><a href="#contact">تواصل</a>
+  </nav>
+</header>
+
+<section>
+  <h1>مواد الهندسة والحاسبات،<br>متشرحة على منهج جامعتك</h1>
+  <p class="lead">شرح أونلاين لطلاب الجامعات في السعودية والكويت وقطر، على نفس سلايدات المادة، مع حل التمارين وأسئلة السنين اللي فاتت.</p>
+  <svg class="trace" viewBox="0 0 960 60" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0 36 H360 l10 -5 l10 5 H420 l8 7 l10 -36 l10 46 l8 -17 H520 q22 -16 44 0 H960"/>
+  </svg>
+  <div class="cta">
+    <a class="btn" href="https://wa.me/201000999274" target="_blank" rel="noopener">اسأل عن مادتك على واتساب</a>
+    <a class="btn alt" href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener">قناة التليجرام</a>
+  </div>
+  <div class="facts"><span>أكتر من 15 سنة تدريس</span><span>كورسات مسجلة ولايف على زوم</span><span>حلول Past Papers</span></div>
+</section>
+
+<section id="subjects">
+  <h2>المواد اللي بنشرحها</h2>
+  <div class="families">
+    <div class="family">
+      <h3>الهندسة</h3>
+      <p>هندسة مدنية وكهربا واتصالات وهندسة طبية</p>
+      <div class="tags"><span>Physics</span><span>Calculus</span><span>Mathematics</span><span>Mechanics</span><span>Statics</span><span>Structures</span><span>Power Engineering</span><span>Communications</span></div>
+    </div>
+    <div class="family">
+      <h3>الحاسبات وتقنية المعلومات</h3>
+      <p>حاسبات ومعلومات وIT</p>
+      <div class="tags"><span>Signals &amp; Systems</span><span>DSP</span><span>Networking</span><span>Discrete Math</span><span>Physics</span><span>Calculus</span></div>
+    </div>
+    <div class="family">
+      <h3>العلوم الطبية</h3>
+      <p>طب وصيدلة وطب أسنان وهندسة طبية حيوية</p>
+      <div class="tags"><span>Biophysics</span><span>Biomechanics</span><span>Bioengineering</span><span>Biomedical DSP</span></div>
+    </div>
+  </div>
+  <p class="lead" style="font-size:16px">مادتك مش موجودة هنا؟ ابعت اسمها وكودها على الواتساب.</p>
+</section>
+
+<section id="courses">
+  <h2>كورس متاح دلوقتي</h2>
+  <div class="feature">
+    <div>
+      <span class="code">BMIT 3110</span>
+      <h3 style="direction:ltr;text-align:right">Biomedical Digital Signal Processing</h3>
+      <p style="color:var(--muted)">جامعة الأمير سطام بن عبدالعزيز. الفصول السبعة كاملة، وكل التمارين محلولة، ومراجعات للميدتيرم والفاينل.</p>
+      <div class="cta"><a class="btn" href="bmit3110.html">تفاصيل الكورس والأسعار</a></div>
+    </div>
+    <a href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener" style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;aspect-ratio:16/9;max-width:100%;border-radius:12px;background:#2e624c;color:#fff;text-decoration:none;padding:16px;text-align:center"><span style="width:64px;height:64px;border-radius:50%;background:#f4c430;display:grid;place-items:center;font-size:28px;color:#14251d">▶</span><span style="font-family:var(--display);font-weight:700;font-size:18px;direction:ltr">Nyquist Sampling Theorem</span><span style="font-size:14px;opacity:.85">شاهد المقطع على قناة تليجرام</span></a>
+  </div>
+</section>
+
+<section id="ways">
+  <h2>طرق الدراسة</h2>
+  <ul class="ways">
+    <li><h3>كورس مسجل</h3><span class="price">من 199 ريال للمادة</span><p>شرح المادة كاملة في مقاطع قصيرة مرتبة، تتفرج عليها في أي وقت، وتسأل على الواتساب.</p></li>
+    <li><h3>مسجل + جلسة أسبوعية</h3><span class="price">من 449 ريال للمادة</span><p>كل اللي في المسجل، ومعاه جلسة أسئلة لايف على زوم كل أسبوع.</p></li>
+    <li><h3>خصوصي لايف</h3><span class="price">بالمادة أو بالساعة</span><p>متابعة كاملة طول الترم، والدفع على أقساط، والتسجيلات معاك.</p></li>
+    <li><h3>مراجعة قبل الامتحان</h3><span class="price">من 79 ريال</span><p>مراجعة مركزة على أسئلة السنين اللي فاتت قبل الميدتيرم والفاينل.</p></li>
+  </ul>
+</section>
+
+<section>
+  <h2>مين بيشرح</h2>
+  <p class="lead">د. م. أسامة العطار، محاضر جامعي في جامعات مصرية، وبيدرّس طلاب الهندسة والحاسبات في السعودية والكويت وقطر. خبرة أكتر من 15 سنة تدريس، وقبلها مهندس اتصالات في هواوي وإريكسون ونوكيا سيمنز وفودافون.</p>
+</section>
+
+<section id="contact" class="final">
+  <h2>ابعت اسم مادتك وكودها</h2>
+  <p class="lead">وهنرد عليك بالمحتوى المتاح والسعر.</p>
+  <div class="cta">
+    <a class="btn" href="https://wa.me/201000999274" target="_blank" rel="noopener">راسلنا على واتساب</a>
+    <span class="num"><b id="phone">00201000999274</b> <button class="copy" id="copy" type="button">نسخ</button></span>
+  </div>
+  <p style="font-size:13px;opacity:.85">واتساب رسائل فقط.</p>
+</section>
+
+<footer>Engineering Hub · مركز الهندسة · د. أسامة العطار</footer>
+</div>
+
+<script>
+(function(){
+  var btn = document.getElementById('copy'), el = document.getElementById('phone');
+  btn.addEventListener('click', function(){
+    function done(){ btn.textContent = 'اتنسخ'; setTimeout(function(){ btn.textContent = 'نسخ'; }, 1800); }
+    function fallback(){ var r = document.createRange(); r.selectNodeContents(el); var s = getSelection(); s.removeAllRanges(); s.addRange(r); btn.textContent = 'اضغط Ctrl+C'; }
+    try { navigator.clipboard.writeText(el.textContent.trim()).then(done, fallback); } catch(e){ fallback(); }
+  });
+})();
+</script>
+
+</body>
+</html>

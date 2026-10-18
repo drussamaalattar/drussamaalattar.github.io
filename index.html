@@ -82,7 +82,8 @@ footer{font-size:13px;color:var(--muted);text-align:center}
 @media (max-width:760px){
   .families{grid-template-columns:1fr}
   .feature{grid-template-columns:1fr}
-  .brand nav{display:none}
+  .brand nav{width:100%;overflow-x:auto;gap:16px;white-space:nowrap;scrollbar-width:none;padding-bottom:2px}
+  .brand nav::-webkit-scrollbar{display:none}
   .wrap{gap:48px}
 }
 .chapters{display:flex;flex-direction:column;border-top:1px solid var(--line)}
@@ -95,6 +96,17 @@ footer{font-size:13px;color:var(--muted);text-align:center}
 .chapters ul{margin:10px 0 0;padding-inline-start:22px;color:var(--muted);font-size:15px;display:flex;flex-direction:column;gap:4px}
 .chapters p{margin:8px 0 0;color:var(--muted);font-size:15px}
 .chapters summary:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.hw{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.hw a.card{display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.hw a.card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.hw .top{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.hw .free{background:var(--accent);color:var(--accent-ink);border-radius:999px;font-size:13px;font-weight:600;padding:2px 10px}
+.hw .hot{background:var(--gold-soft);border:1px solid var(--gold);border-radius:12px;padding:8px 12px;font-size:14px;line-height:1.6}
+.hw .hot b{font-family:var(--display);color:var(--gold)}
+.hw .meta{font-size:14px;color:var(--muted)}
+.hw .go{margin-top:auto;font-family:var(--display);font-weight:700;color:var(--accent)}
+.hw-cover{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:8px;aspect-ratio:16/9;max-width:100%;border-radius:12px;background:#2e624c;color:#fff;text-decoration:none;padding:16px;text-align:center}
+.hw-cover .big{font-family:var(--display);font-weight:800;font-size:44px;color:#f4c430;line-height:1}
 </style>
 </head>
 <body>
@@ -104,7 +116,7 @@ footer{font-size:13px;color:var(--muted);text-align:center}
 <header class="brand">
   <div class="id"><svg width="52" height="52" viewBox="0 0 100 100" role="img" aria-label="شعار مركز الهندسة"><circle cx="50" cy="50" r="50" fill="#2e624c"/><text x="50" y="40" text-anchor="middle" font-family="Noto Kufi Arabic, Tahoma, sans-serif" font-weight="800" font-size="20" fill="#fff">مركز</text><text x="50" y="64" text-anchor="middle" font-family="Noto Kufi Arabic, Tahoma, sans-serif" font-weight="800" font-size="20" fill="#fff">الهندسة</text><path d="M18 76 H44 l3 -3 l3 3 h3 l3 -12 l3 16 l3 -6 h4 q4 -5 8 0 H82" fill="none" stroke="#f4c430" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg><b>Engineering Hub</b></div>
   <nav aria-label="أقسام الموقع">
-    <a href="#subjects">المواد</a><a href="#courses">الكورسات</a><a href="#ways">طرق الدراسة</a><a href="#contact">تواصل</a>
+    <a href="#subjects">المواد</a><a href="#courses">الكورسات</a><a href="#homework">حل الواجبات</a><a href="#ways">طرق الدراسة</a><a href="#contact">تواصل</a>
   </nav>
 </header>
 
@@ -162,6 +174,29 @@ footer{font-size:13px;color:var(--muted);text-align:center}
       <div class="cta"><a class="btn" href="bmts3320.html">تفاصيل الكورس والأسعار</a></div>
     </div>
     <a href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener" style="display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;aspect-ratio:16/9;max-width:100%;border-radius:12px;background:#2e624c;color:#fff;text-decoration:none;padding:16px;text-align:center"><span style="width:64px;height:64px;border-radius:50%;background:#f4c430;display:grid;place-items:center;font-size:28px;color:#14251d">▶</span><span style="font-family:var(--display);font-weight:700;font-size:18px;direction:ltr">Biceps Torque at the Elbow</span><span style="font-size:14px;opacity:.85">شاهد المقطع على قناة تليجرام</span></a>
+  </div>
+  <div class="feature">
+    <div>
+      <span class="code">PHYS 1110</span>
+      <h3 style="direction:ltr;text-align:right">Physics 1 for Engineering</h3>
+      <p style="color:var(--muted)">جامعة أم القرى – فرع القنفذة. حل الواجبات خطوة بخطوة بالعربي، مع الشرح على السبورة وملخص قوانين لكل فصل. الجزء الأول من الواجب الأول متاح مجاناً.</p>
+      <div class="cta"><a class="btn" href="phys1110/hw1/">افتح حل الواجب الأول مجاناً</a><a class="btn alt" href="https://wa.me/201000999274?text=PHYS%201110%20%D8%AC%D8%B2%D8%A1%202" target="_blank" rel="noopener">اطلب الجزء الثاني</a></div>
+    </div>
+    <a class="hw-cover" href="phys1110/hw1/"><span class="big">90%</span><span style="font-family:var(--display);font-weight:700;font-size:18px">من الميدتيرم من الواجب ده</span><span style="font-size:14px;opacity:.85">حل الواجب الأول · 22 سؤال</span></a>
+  </div>
+</section>
+
+<section id="homework">
+  <h2>حل الواجبات</h2>
+  <p class="lead">حلول الواجبات خطوة بخطوة، تتصفحها من الموبايل من غير تحميل.</p>
+  <div class="hw">
+    <a class="card" href="phys1110/hw1/">
+      <div class="top"><span class="code">PHYS 1110</span><span class="free">مجاني</span></div>
+      <h3>حل الواجب الأول – الجزء الأول</h3>
+      <div class="meta">فيزياء للهندسة · جامعة أم القرى – فرع القنفذة · أسئلة 1 لـ 22</div>
+      <div class="hot"><b>90%</b> من أسئلة الميدتيرم جاية من الواجب ده</div>
+      <span class="go">افتح الحل ←</span>
+    </a>
   </div>
 </section>
 

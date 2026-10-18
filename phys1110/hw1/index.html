@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>حل الواجب الأول PHYS 1110 – الجزء الأول | د. أسامة العطار</title>
+<meta name="description" content="حل الواجب الأول في الفيزياء للهندسة PHYS 1110 خطوة بخطوة – أسئلة 1 لـ 22 – Engineering Hub د. أسامة العطار">
+<meta property="og:title" content="حل الواجب الأول – فيزياء للهندسة PHYS 1110">
+<meta property="og:description" content="90% من الميدتيرم جاي من الواجب ده. الحل خطوة بخطوة مع الشرح على السبورة.">
+<meta name="theme-color" content="#2f6450">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--green:#2f6450;--green-d:#1f4537;--gold:#a87a0a;--gold-l:#f6ecc9;--bg:#eef2f0;--card:#fff;--ink:#14261f;--muted:#5b6b64;--line:#d6dfda}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:"Cairo",system-ui,sans-serif;background:var(--bg);color:var(--ink);-webkit-tap-highlight-color:transparent}
+a{color:inherit}
+header.top{background:var(--green);color:#fff;padding:14px 16px}
+.brand{display:flex;align-items:center;gap:10px;max-width:980px;margin:0 auto}
+.logo{width:40px;height:40px;border-radius:50%;background:#fff;color:var(--green);display:grid;place-items:center;font-weight:800;font-size:11px;line-height:1.1;text-align:center;flex:none}
+.brand b{font-size:15px}.brand small{display:block;opacity:.8;font-size:12px}
+.brand .tg{margin-inline-start:auto;font-size:13px;border:1px solid rgba(255,255,255,.5);padding:6px 12px;border-radius:999px;text-decoration:none;white-space:nowrap}
+.hero{max-width:980px;margin:0 auto;padding:22px 16px 8px}
+.code{font-family:ui-monospace,monospace;color:var(--gold);font-size:13px;letter-spacing:.06em}
+h1{font-size:clamp(24px,5vw,36px);margin:6px 0 8px;line-height:1.35}
+.hero p{color:var(--muted);margin:0 0 14px;line-height:1.8}
+.alert{display:flex;gap:12px;align-items:center;background:var(--gold-l);border:1px solid #e3cf8c;border-radius:14px;padding:14px 16px;margin:6px 0 14px}
+.alert .big{font-size:30px;font-weight:800;color:var(--gold);line-height:1;flex:none}
+.alert p{margin:0;color:var(--ink);line-height:1.7;font-size:15px}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:7px 14px;font:600 13px "Cairo",sans-serif;cursor:pointer;color:var(--ink)}
+.chip:hover{border-color:var(--green)}
+.toolbar{position:sticky;top:0;z-index:5;background:rgba(238,242,240,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.tb{max-width:980px;margin:0 auto;display:flex;align-items:center;gap:8px;padding:8px 16px}
+.tb button,.tb select{font:600 14px "Cairo",sans-serif;border:1px solid var(--line);background:#fff;border-radius:10px;height:38px;min-width:38px;padding:0 10px;cursor:pointer;color:var(--ink)}
+.tb select{max-width:46vw}
+.tb .pg{font-size:13px;color:var(--muted);white-space:nowrap}
+.tb .sp{flex:1}
+#viewer{max-width:980px;margin:0 auto;padding:12px 8px 20px;display:flex;flex-direction:column;align-items:center;gap:12px}
+.page{background:#fff;border-radius:10px;box-shadow:0 1px 3px rgba(0,0,0,.08),0 4px 16px rgba(0,0,0,.05);overflow:hidden;width:100%;position:relative}
+.page canvas{display:block;width:100%;height:auto}
+.page .ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-size:13px}
+#zoomwrap{width:100%;display:flex;flex-direction:column;align-items:center;gap:12px}
+.loading{padding:40px;text-align:center;color:var(--muted)}
+.bar{height:4px;background:var(--line);border-radius:4px;overflow:hidden;width:200px;margin:12px auto}
+.bar i{display:block;height:100%;width:0;background:var(--green);transition:width .2s}
+.cta{max-width:980px;margin:8px auto 0;padding:0 16px}
+.cta .box{background:var(--green);color:#fff;border-radius:18px;padding:22px}
+.cta h2{margin:0 0 6px;font-size:22px}.cta p{margin:0 0 14px;opacity:.9;line-height:1.8}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:46px;padding:0 20px;border-radius:12px;font-weight:800;text-decoration:none}
+.btn.w{background:#fff;color:var(--green)}.btn.o{border:1px solid rgba(255,255,255,.6);color:#fff}
+footer{text-align:center;color:var(--muted);font-size:13px;padding:24px 16px 40px}
+.fab{position:fixed;bottom:16px;left:16px;z-index:6;width:46px;height:46px;border-radius:50%;border:0;background:var(--green);color:#fff;font-size:20px;box-shadow:0 4px 14px rgba(0,0,0,.2);cursor:pointer;display:none}
+@media (max-width:560px){.tb .hide-s{display:none}.brand .tg{display:none}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <div class="logo">مركز<br>الهندسة</div>
+    <div><b>Engineering Hub · د. أسامة العطار</b><small>شرح مواد الهندسة لطلاب الخليج</small></div>
+    <a class="tg" href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener">قناة التليجرام</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="code" dir="ltr">PHYS 1110 · HOMEWORK 1 · PART 1</div>
+  <h1>حل الواجب الأول في الفيزياء للهندسة – الجزء الأول</h1>
+  <div class="alert">
+    <div class="big">90%</div>
+    <p><b>من أسئلة الميدتيرم جاية من الواجب ده.</b> الميد من 20، واللي يفهم الحل ده صح يقدر يجيب 17 من 20 بسهولة. ذاكر كل سؤال لحد ما تعرف <b>ليه</b> الإجابة دي صح.</p>
+  </div>
+  <p>حل الأسئلة من 1 لـ 22 خطوة بخطوة: السؤال بالإنجليزي والعربي، الإجابة، السبب، ملاحظاتي بخط إيدي، وصورة الشرح على السبورة. وفي آخر كل فصل ملخص قوانين وأسئلة تختبر بيها نفسك.</p>
+  <div class="chips" id="chips"></div>
+</section>
+
+<div class="toolbar">
+  <div class="tb">
+    <select id="jump" aria-label="اذهب إلى"></select>
+    <span class="sp"></span>
+    <span class="pg" id="pg">– / –</span>
+    <button id="zout" aria-label="تصغير">−</button>
+    <button id="zin" aria-label="تكبير">+</button>
+    <button id="zfit" class="hide-s">ملء العرض</button>
+  </div>
+</div>
+
+<main id="viewer">
+  <div class="loading" id="loading">جاري تحميل الحل…<div class="bar"><i id="barfill"></i></div></div>
+  <div id="zoomwrap"></div>
+</main>
+
+<section class="cta">
+  <div class="box">
+    <h2>الجزء الثاني: أسئلة 23 لـ 41 والمسائل المحلولة</h2>
+    <p>باقي أسئلة الاختيار من متعدد (المقذوفات، المتجهات، الضرب القياسي والاتجاهي، قوانين نيوتن) والخمس مسائل المحلولة بالتفصيل، متاحين بالاشتراك. ابعت "PHYS 1110 جزء 2" على الواتساب.</p>
+    <div class="btns">
+      <a class="btn w" href="https://wa.me/201000999274?text=PHYS%201110%20%D8%AC%D8%B2%D8%A1%202" target="_blank" rel="noopener">اشترك عن طريق واتساب</a>
+      <a class="btn o" href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener">قناة التليجرام</a>
+    </div>
+  </div>
+</section>
+<footer>Engineering Hub · مركز الهندسة · د. م. أسامة العطار</footer>
+<button class="fab" id="fab" aria-label="لأعلى">↑</button>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+<script>
+(function(){
+  var SECTIONS=[
+    {t:"البداية",p:1},
+    {t:"الفصل 1: القياس والوحدات (Q1–Q7)",p:2,chip:"الفصل 1 · القياس"},
+    {t:"Q1",p:2},{t:"Q2",p:3},{t:"Q3",p:4},{t:"Q4",p:5},{t:"Q5",p:6},{t:"Q6",p:7},{t:"Q7",p:8},
+    {t:"ملخص قوانين الفصل 1",p:9},{t:"اختبر نفسك – الفصل 1",p:10},
+    {t:"الفصل 2: الحركة في خط مستقيم (Q8–Q21)",p:11,chip:"الفصل 2 · الحركة"},
+    {t:"Q8",p:11},{t:"Q9",p:12},{t:"Q10",p:13},{t:"Q11",p:14},{t:"Q12",p:15},{t:"Q13",p:16},{t:"Q14",p:17},
+    {t:"Q15",p:18},{t:"Q16",p:19},{t:"Q17",p:20},{t:"Q18",p:21},{t:"Q19",p:22},{t:"Q20",p:23},{t:"Q21",p:24},
+    {t:"ملخص قوانين الفصل 2",p:25},{t:"اختبر نفسك – الفصل 2",p:26},
+    {t:"الفصل 4: المقذوفات (Q22)",p:27,chip:"الفصل 4 · المقذوفات"},
+    {t:"ملخص قوانين الفصل 4",p:28},{t:"الجزء الثاني",p:29,chip:"الجزء الثاني"}
+  ];
+  var jump=document.getElementById('jump'),chips=document.getElementById('chips');
+  SECTIONS.forEach(function(s){
+    var o=document.createElement('option');o.value=s.p;
+    o.textContent=(/^Q\d/.test(s.t)?"   سؤال "+s.t.slice(1):s.t);jump.appendChild(o);
+    if(s.chip){var b=document.createElement('button');b.className='chip';b.textContent=s.chip;b.onclick=function(){go(s.p)};chips.appendChild(b);}
+  });
+  jump.onchange=function(){go(+jump.value)};
+
+  var pdfjs=window['pdfjs-dist/build/pdf'];
+  pdfjs.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+  var wrap=document.getElementById('zoomwrap'),pgEl=document.getElementById('pg');
+  var doc,pages=[],zoom=1,rendered={};
+  function maxW(){return Math.min(document.getElementById('viewer').clientWidth-16,960)}
+
+  var task=pdfjs.getDocument({url:'hw1-part1.pdf',disableAutoFetch:false});
+  task.onProgress=function(p){if(p.total)document.getElementById('barfill').style.width=Math.round(p.loaded/p.total*100)+'%'};
+  task.promise.then(function(d){
+    doc=d;var chain=Promise.resolve();
+    for(var i=1;i<=d.numPages;i++)(function(n){chain=chain.then(function(){return d.getPage(n).then(function(pg){
+      var vp=pg.getViewport({scale:1});
+      var div=document.createElement('div');div.className='page';div.dataset.n=n;
+      div.innerHTML='<div class="ph">صفحة '+n+'</div>';
+      pages[n]={pg:pg,w:vp.width,h:vp.height,div:div};wrap.appendChild(div);
+    })})})(i);
+    return chain;
+  }).then(function(){
+    document.getElementById('loading').remove();layout();observe();updatePg();
+    var h=location.hash.match(/p=(\d+)/);if(h)go(+h[1]);
+  }).catch(function(){document.getElementById('loading').innerHTML='تعذر تحميل الملف. <a href="hw1-part1.pdf">افتح الـ PDF مباشرة</a>'});
+
+  function layout(){
+    var W=maxW()*zoom;
+    pages.forEach(function(p,n){if(!p)return;
+      p.div.style.width=W+'px';p.div.style.maxWidth=zoom>1?'none':'100%';
+      p.div.style.aspectRatio=p.w+' / '+p.h;
+    });
+    wrap.style.alignItems=zoom>1?'flex-start':'center';
+    document.getElementById('viewer').style.overflowX=zoom>1?'auto':'visible';
+    rendered={};pages.forEach(function(p){if(p){var c=p.div.querySelector('canvas');if(c)c.dataset.stale=1}});
+    visible.forEach(render);
+  }
+  function render(n){
+    var p=pages[n];if(!p||rendered[n])return;rendered[n]=1;
+    var dpr=Math.min(window.devicePixelRatio||1,2.5);
+    var W=p.div.clientWidth||maxW();var scale=W/p.w*dpr;
+    var vp=p.pg.getViewport({scale:scale});
+    var c=document.createElement('canvas');c.width=vp.width;c.height=vp.height;
+    p.pg.render({canvasContext:c.getContext('2d'),viewport:vp}).promise.then(function(){
+      var old=p.div.querySelector('canvas,.ph');p.div.innerHTML='';p.div.appendChild(c);
+    });
+  }
+  var visible=new Set();
+  function observe(){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      var n=+e.target.dataset.n;if(e.isIntersecting){visible.add(n);render(n);render(n+1);}else visible.delete(n);
+    });updatePg()},{rootMargin:'600px 0px'});
+    pages.forEach(function(p){if(p)io.observe(p.div)});
+  }
+  function current(){var best=1,mid=window.innerHeight*0.4;
+    pages.forEach(function(p,n){if(!p)return;var r=p.div.getBoundingClientRect();if(r.top<mid)best=n});return best}
+  function updatePg(){if(!doc)return;var c=current();pgEl.textContent=c+' / '+doc.numPages;
+    var sel=1;SECTIONS.forEach(function(s){if(s.p<=c)sel=s.p});
+    if(+jump.value!==sel){for(var i=0;i<jump.options.length;i++){if(+jump.options[i].value===sel){jump.selectedIndex=i;}}}
+    document.getElementById('fab').style.display=window.scrollY>800?'block':'none';}
+  window.addEventListener('scroll',function(){requestAnimationFrame(updatePg)},{passive:true});
+  function go(n){var p=pages[n];if(!p)return;var y=p.div.getBoundingClientRect().top+window.scrollY-60;window.scrollTo({top:y,behavior:'smooth'});history.replaceState(null,'','#p='+n)}
+  document.getElementById('zin').onclick=function(){var c=current();zoom=Math.min(zoom+0.5,3);layout();go(c)};
+  document.getElementById('zout').onclick=function(){var c=current();zoom=Math.max(zoom-0.5,1);layout();go(c)};
+  document.getElementById('zfit').onclick=function(){var c=current();zoom=1;layout();go(c)};
+  document.getElementById('fab').onclick=function(){window.scrollTo({top:0,behavior:'smooth'})};
+  var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(layout,250)});
+  document.addEventListener('contextmenu',function(e){if(e.target.tagName==='CANVAS')e.preventDefault()});
+})();
+</script>
+</body>
+</html>

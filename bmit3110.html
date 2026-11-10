@@ -117,6 +117,10 @@ video{width:100%;max-width:100%;aspect-ratio:1280/654;border-radius:12px;border:
 .wa-float svg{width:22px;height:22px;flex:none}
 .wa-float:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
 @media (max-width:480px){.wa-float span{display:none}.wa-float{padding:14px}}
+
+#weekly-clips .clips{display:flex;flex-direction:column;gap:16px;min-width:0}
+#weekly-clips .weekly-clip{width:100%;max-width:100%;min-width:0;overflow:hidden}
+#weekly-clips .weekly-clip iframe{max-width:100%!important;min-width:0!important}
 </style>
 </head>
 <body>
@@ -137,6 +141,14 @@ video{width:100%;max-width:100%;aspect-ratio:1280/654;border-radius:12px;border:
     <span class="num">أو راسل: <b id="phone1">00201000999274</b> <button class="copy" id="copy1" data-target="phone1" type="button">نسخ</button></span>
   </div>
   <p class="note">واتساب رسائل فقط. حلول تمارين مجانية كل يوم على قناة تليجرام <a href="https://t.me/EngineeringHubDr" target="_blank" rel="noopener" style="color:var(--accent)">Engineering Hub</a>.</p>
+</section>
+
+<section id="weekly-clips" dir="rtl">
+  <h2>🎬 مقطع الأسبوع المجاني</h2>
+  <p class="lead">كل أحد مقطع جديد مجاني من الكورس</p>
+  <div class="clips">
+    <div class="weekly-clip" data-post="EngineeringHubDr/6"><script async src="https://telegram.org/js/telegram-widget.js?22" data-telegram-post="EngineeringHubDr/6" data-width="100%"></script></div>
+  </div>
 </section>
 
 <section>
